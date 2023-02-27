@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Animated Search Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="serchBox">
+        <div class="searchBox__open">
+            <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <div class="searchBox__input">
+            <input type="text" placeholder="Search Here">
+        </div>
+        <div class="searchBox__close">
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const serchBox = document.querySelector('.serchBox');
+        serchBox.querySelector('.searchBox__open').addEventListener('click', () => {
+            serchBox.classList.add('active');
+        });
+
+        serchBox.querySelector('.searchBox__close').addEventListener('click', () => {
+            serchBox.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
